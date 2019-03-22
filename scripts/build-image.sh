@@ -28,3 +28,4 @@ $CURL -L --retry 5 https://github.com/containernetworking/plugins/releases/downl
 
 docker build --no-cache -t $IMAGE_NAME:$VERSION_ARCH -t $IMAGE_NAME:$CNI_VERSION-$ARCH .
 docker push $IMAGE_NAME:$VERSION_ARCH
+docker push $IMAGE_NAME:$CNI_VERSION-$ARCH
