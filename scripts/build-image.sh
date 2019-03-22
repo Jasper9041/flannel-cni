@@ -26,5 +26,5 @@ mkdir -p dist
 $CURL -L --retry 5 https://github.com/containernetworking/cni/releases/download/$CNI_VERSION/cni-$ARCHITECTURE-$CNI_VERSION.tgz | tar -xz -C dist/
 $CURL -L --retry 5 https://github.com/containernetworking/plugins/releases/download/$CNI_VERSION/cni-plugins-$ARCHITECTURE-$CNI_VERSION.tgz | tar -xz -C dist/
 
-docker build --no-cache -t $IMAGE_NAME:$VERSION_ARCH .
+docker build --no-cache -t $IMAGE_NAME:$VERSION_ARCH -t $IMAGE_NAME:$CNI_VERSION-$ARCH .
 docker push $IMAGE_NAME:$VERSION_ARCH
