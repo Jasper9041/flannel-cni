@@ -2,7 +2,7 @@
 set -e
 CURL="curl -sSf"
 FLANNEL_CNI_ROOT=$(git rev-parse --show-toplevel)
-IMAGE_NAME=quay.io/coreos/flannel-cni
+IMAGE_NAME=jasper9041/flannel-cni
 VERSION=$($FLANNEL_CNI_ROOT/scripts/git-version)
 CNI_VERSION="v0.6.0"
 ARCH=$(uname -m)
